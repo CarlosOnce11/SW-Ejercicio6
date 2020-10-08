@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Condiciones & Bucles</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+        var arreglo=[];//arreglo
+        var sumaT=0;//suma de todos los numeros
+        //Multiplicacion de numeros pares
+        var MP=1;//multiplicacion de pares
+        var SI=0;//suma de impares
+        var primo=0;
+        var LP = ' ';//lista de primos
+        var LNP= ' ';//lista de no primos
+
+        for(var c=0; c<20; c++){
+            arreglo[c]= Math.round(Math.random()*100);
+            alert('Numero:'+arreglo[c]);
+            sumaT+=arreglo[c];
+            if(arreglo[c]%2==0){
+                MP=MP*arreglo[c];
+
+            }
+            else{
+                SI+=arreglo[c];
+            }
+            //Verificacion de Numeros Primos
+            primo=0;
+            for(var i=1;i<arreglo[c]; i++){
+                if(arreglo[c]%i==0){
+                    primo+=1;
+                }
+            }
+            if(primo>2){
+                LNP+='-'+arreglo[c];
+
+                 }
+            else{
+                LP+='-'+arreglo[c];
+            }
+
+        }
+        alert('La suma total de arreglo es:'+sumaT);
+        alert('La multiplicacion de números pares es:'+MP);
+        alert('La suma de los números impares es:'+SI);
+        alert('Los números primos no primos son:'+LNP);
+        alert('La lista de números primos es:'+LP);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
